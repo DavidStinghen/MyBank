@@ -16,3 +16,10 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('accounts', 'AcountController@store');
+
+Route::post('type', 'TypeController@store');
+
+Route::post('flows', 'FlowController@store');
+Route::put('flows', 'FlowController@update');
